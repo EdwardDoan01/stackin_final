@@ -1,0 +1,13 @@
+{
+  "name": "stackin-backend",
+  "version": "1.0.0",
+  "description": "Stackin Django Backend",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ..",
+    "start": "cd Stackin && gunicorn Stackin.wsgi:application --bind 0.0.0.0:$PORT"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
