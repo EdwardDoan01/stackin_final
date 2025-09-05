@@ -1,5 +1,4 @@
-# Railway ignore file - use Nixpacks instead of Docker
-Dockerfile
+# Railway ignore file - allow Dockerfile for forced Docker builds
 docker-compose.yml
 nginx.conf
 deploy.sh
