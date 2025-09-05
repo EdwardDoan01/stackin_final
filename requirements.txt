@@ -2,8 +2,9 @@ django
 djangorestframework
 django-cors-headers
 djangorestframework-simplejwt
-mysqlclient
+PyMySQL
 python-decouple
 dj-database-url
 gunicorn
 Pillow
+whitenoise

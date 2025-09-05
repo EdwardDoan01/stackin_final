@@ -1,0 +1,10 @@
+# Railway ignore file
+Dockerfile
+docker-compose.yml
+nginx.conf
+deploy.sh
+deploy-local.sh
+deploy-heroku.sh
+*.md
+.git
+.gitignore
