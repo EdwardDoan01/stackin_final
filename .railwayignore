@@ -6,6 +6,8 @@ deploy.sh
 deploy-local.sh
 deploy-heroku.sh
 deploy-railway.sh
+build.sh
+start.sh
 *.md
 .git
 .gitignore
