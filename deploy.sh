@@ -47,18 +47,18 @@ sleep 30
 
 # Run migrations
 echo "🗄️  Running database migrations..."
-docker-compose exec web python manage.py migrate --settings=Stackin.settings_production
+docker-compose exec web python Stackin/manage.py migrate --settings=Stackin.settings_production
 
 # Create superuser (optional)
 echo "👤 Do you want to create a superuser? (y/n)"
 read -r response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    docker-compose exec web python manage.py createsuperuser --settings=Stackin.settings_production
+    docker-compose exec web python Stackin/manage.py createsuperuser --settings=Stackin.settings_production
 fi
 
 # Collect static files
 echo "📦 Collecting static files..."
-docker-compose exec web python manage.py collectstatic --noinput --settings=Stackin.settings_production
+docker-compose exec web python Stackin/manage.py collectstatic --noinput --settings=Stackin.settings_production
 
 echo "✅ Deployment completed!"
 echo "🌐 Your application is running at: http://localhost"

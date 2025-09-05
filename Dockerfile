@@ -29,7 +29,7 @@ COPY . /app/
 RUN mkdir -p /app/logs
 
 # Collect static files
-RUN python manage.py collectstatic --noinput --settings=Stackin.settings_production
+RUN python Stackin/manage.py collectstatic --noinput --settings=Stackin.settings_production
 
 # Create a non-root user
 RUN adduser --disabled-password --gecos '' appuser

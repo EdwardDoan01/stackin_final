@@ -9,7 +9,7 @@ cmds = [
 [phases.build]
 cmds = [
     "cd frontend && npm install && npm run build && cd ..",
-    "python manage.py collectstatic --noinput --settings=Stackin.settings_production"
+    "python Stackin/manage.py collectstatic --noinput --settings=Stackin.settings_production"
 ]
 
 [start]

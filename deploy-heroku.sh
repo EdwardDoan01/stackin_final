@@ -59,15 +59,15 @@ git push heroku main
 
 # Run migrations
 echo "🗄️  Running database migrations..."
-heroku run python manage.py migrate --settings=Stackin.settings_production --app $app_name
+heroku run python Stackin/manage.py migrate --settings=Stackin.settings_production --app $app_name
 
 # Collect static files
 echo "📦 Collecting static files..."
-heroku run python manage.py collectstatic --noinput --settings=Stackin.settings_production --app $app_name
+heroku run python Stackin/manage.py collectstatic --noinput --settings=Stackin.settings_production --app $app_name
 
 echo "✅ Deployment completed!"
 echo "🌐 Your app is live at: https://$app_name.herokuapp.com"
 echo "📊 Admin panel: https://$app_name.herokuapp.com/admin"
 echo ""
 echo "🔧 To create a superuser, run:"
-echo "   heroku run python manage.py createsuperuser --settings=Stackin.settings_production --app $app_name"
+echo "   heroku run python Stackin/manage.py createsuperuser --settings=Stackin.settings_production --app $app_name"

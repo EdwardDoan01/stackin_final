@@ -36,19 +36,19 @@ cp -r frontend/dist/* staticfiles/
 
 # Run migrations
 echo "🗄️  Running database migrations..."
-python manage.py migrate
+python Stackin/manage.py migrate
 
 # Collect static files
 echo "📦 Collecting static files..."
-python manage.py collectstatic --noinput
+python Stackin/manage.py collectstatic --noinput
 
 # Create superuser (optional)
 echo "👤 Do you want to create a superuser? (y/n)"
 read -r response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
-    python manage.py createsuperuser
+    python Stackin/manage.py createsuperuser
 fi
 
 echo "✅ Local deployment completed!"
-echo "🌐 Start the development server with: python manage.py runserver"
+echo "🌐 Start the development server with: python Stackin/manage.py runserver"
 echo "📊 Admin panel: http://localhost:8000/admin"
