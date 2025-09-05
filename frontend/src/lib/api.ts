@@ -3,7 +3,9 @@ import type { AxiosError, AxiosInstance } from 'axios'
 
 type Tokens = { access: string; refresh: string }
 
-const API_BASE_URL = '/api'
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://your-stackin-app.herokuapp.com/api'  // Replace with your actual Heroku URL
+  : '/api'
 
 const getTokens = (): Tokens | null => {
   const raw = localStorage.getItem('stackin_tokens')

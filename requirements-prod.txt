@@ -1,0 +1,18 @@
+# Production requirements for Stackin project
+django==5.2.4
+djangorestframework==3.15.2
+django-cors-headers==4.3.1
+djangorestframework-simplejwt==5.3.0
+mysqlclient==2.2.4
+python-decouple==3.8
+dj-database-url==2.1.0
+gunicorn==21.2.0
+Pillow==10.4.0
+whitenoise==6.6.0
+
+# Additional production dependencies
+psycopg2-binary==2.9.9  # Alternative to mysqlclient for PostgreSQL
+redis==5.0.1  # For caching
+celery==5.3.4  # For background tasks
+django-redis==5.4.0  # Redis cache backend
+sentry-sdk==1.40.0  # Error tracking

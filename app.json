@@ -1,0 +1,50 @@
+{
+  "name": "Stackin",
+  "description": "A task management platform connecting users with skilled taskers",
+  "repository": "https://github.com/yourusername/stackin",
+  "logo": "https://via.placeholder.com/150x50/0077CC/FFFFFF?text=Stackin",
+  "keywords": ["django", "react", "task-management", "platform"],
+  "success_url": "/",
+  "scripts": {
+    "dokku": {
+      "predeploy": "python manage.py migrate --settings=Stackin.settings_production && python manage.py collectstatic --noinput --settings=Stackin.settings_production"
+    }
+  },
+  "env": {
+    "DEBUG": {
+      "description": "Debug mode",
+      "value": "False"
+    },
+    "SECRET_KEY": {
+      "description": "Django secret key",
+      "generator": "secret"
+    },
+    "DATABASE_URL": {
+      "description": "Database URL",
+      "value": "sqlite:///db.sqlite3"
+    },
+    "ALLOWED_HOSTS": {
+      "description": "Allowed hosts",
+      "value": "your-app-name.herokuapp.com"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ]
+}
