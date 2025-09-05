@@ -1,0 +1,35 @@
+# Python
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.sqlite3
+*.py[cod]
+
+# Node modules
+frontend/node_modules/
+frontend/.vite/
+
+# Build outputs
+dist/
+build/
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
