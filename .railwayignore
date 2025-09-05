@@ -1,4 +1,4 @@
-# Railway ignore file
+# Railway ignore file - use Nixpacks instead of Docker
 Dockerfile
 docker-compose.yml
 nginx.conf

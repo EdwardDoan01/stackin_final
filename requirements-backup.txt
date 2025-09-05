@@ -1,0 +1,10 @@
+django
+djangorestframework
+django-cors-headers
+djangorestframework-simplejwt
+PyMySQL
+python-decouple
+dj-database-url
+gunicorn
+Pillow
+whitenoise
