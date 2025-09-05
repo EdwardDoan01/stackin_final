@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["gcc", "pkg-config", "libmariadb-dev", "libmariadb-dev-compat", "nodejs", "npm"]
+nixPkgs = ["nodejs", "npm"]
 
 [phases.install]
 cmds = [
@@ -13,4 +13,4 @@ cmds = [
 ]
 
 [start]
-cmd = "gunicorn Stackin.wsgi:application --bind 0.0.0.0:$PORT"
+cmd = "cd Stackin && gunicorn Stackin.wsgi:application --bind 0.0.0.0:$PORT"

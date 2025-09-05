@@ -5,6 +5,8 @@ nginx.conf
 deploy.sh
 deploy-local.sh
 deploy-heroku.sh
+deploy-railway.sh
 *.md
 .git
 .gitignore
+requirements-backup.txt
